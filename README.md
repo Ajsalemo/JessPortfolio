@@ -1,2 +1,2 @@
 # JessPortfolio
-Portfolio using Gatsby for my girlfriend 
+A personal Portfolio using Gatsby  
