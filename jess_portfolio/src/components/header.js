@@ -1,42 +1,51 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+import { Link } from "gatsby"
+import Navbar from "react-bootstrap/Navbar"
+import NavbarBrand from "react-bootstrap/NavbarBrand"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const StyledNavbar = styled(Navbar)`
+  height: 10rem;
+  justify-content: space-between;
+  padding: 0 3.6rem;
+`
+const StyledNavbarBrand = styled(NavbarBrand)`
+  font-size: 1.95rem;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+`
+const LinkedinLink = styled.a`
+  padding-left: 2rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #000;
+`
+const HeaderParentDiv = styled.div`
+  width: 14%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 0 0.2rem 0.5rem;
+  font-size: 1.05rem;
+  align-items: center;
+`
+
+export const Header = ({ name }) => (
+  <StyledNavbar>
+    <StyledNavbarBrand href="/">{name}</StyledNavbarBrand>
+    <HeaderParentDiv>
+      <Link to="#" style={{ color: "#000" }}>
+        Work
+      </Link>
+      <Link to="#" style={{ color: "#000" }}>
+        About
+      </Link>
+      <LinkedinLink
+        href="https://www.linkedin.com/in/jessica0perry/"
+        linkedin="linkedin"
+        rel="noopener noreferrer"
+      >
+        in
+      </LinkedinLink>
+    </HeaderParentDiv>
+  </StyledNavbar>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
