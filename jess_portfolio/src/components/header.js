@@ -1,13 +1,16 @@
-import React from "react"
-import styled from "styled-components"
 import { Link } from "gatsby"
+import React from "react"
 import Navbar from "react-bootstrap/Navbar"
 import NavbarBrand from "react-bootstrap/NavbarBrand"
+import styled from "styled-components"
+
+// --------------------------------------- Styled Components ------------------------ //
+// ---------------------------------------------------------------------------------- //
 
 const StyledNavbar = styled(Navbar)`
   height: 10rem;
   justify-content: space-between;
-  padding: 0 3.6rem;
+  padding: 0 2.6rem;
 `
 const StyledNavbarBrand = styled(NavbarBrand)`
   font-size: 1.95rem;
@@ -28,6 +31,8 @@ const HeaderParentDiv = styled.div`
   font-size: 1.05rem;
   align-items: center;
 `
+// ---------------------------------------------------------------------------------- //
+// ---------------------------------------------------------------------------------- //
 
 export const Header = ({ name }) => (
   <StyledNavbar>
