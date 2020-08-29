@@ -38,10 +38,10 @@ export const Header = ({ name }) => (
   <StyledNavbar>
     <StyledNavbarBrand href="/">{name}</StyledNavbarBrand>
     <HeaderParentDiv>
-      <Link to="#" style={{ color: "#000" }}>
+      <Link to="/" style={{ color: "#000" }}>
         Work
       </Link>
-      <Link to="#" style={{ color: "#000" }}>
+      <Link to="/about" style={{ color: "#000" }}>
         About
       </Link>
       <LinkedinLink

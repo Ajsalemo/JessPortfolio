@@ -7,8 +7,13 @@ import styled from "styled-components"
 // ---------------------------------------------------------------------------------- //
 
 const StyledGatsbyImg = styled(Img)`
-  height: 35rem;
+  height: ${props => (props.fileName === "headshot.png" ? "40rem" : "35rem")};
   width: 35rem;
+  transition: 0.5s ease;
+  &:hover {
+    transition: 0.5s ease;
+    opacity: ${props => (props.fileName === "headshot.png" ? null : "0.7")};
+  }
 `
 // ---------------------------------------------------------------------------------- //
 // ---------------------------------------------------------------------------------- //
@@ -38,5 +43,10 @@ export const Image = ({ fileName }) => {
     return n.node.relativePath.includes(fileName)
   })
 
-  return <StyledGatsbyImg fluid={image.node.childImageSharp.fluid} />
+  return (
+    <StyledGatsbyImg
+      fluid={image.node.childImageSharp.fluid}
+      fileName={fileName}
+    />
+  )
 }

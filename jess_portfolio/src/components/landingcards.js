@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
@@ -25,22 +26,35 @@ const LandingCardCaption = styled.h2`
   font-weight: 400;
   padding-top: 1rem;
 `
+const LandingCardLinks = styled(Link)`
+  color: #000;
+  &:hover {
+    color: #000;
+    text-decoration: none;
+  }
+`
 // ---------------------------------------------------------------------------------- //
 // ---------------------------------------------------------------------------------- //
 
 export const LandingCards = () => (
   <Row style={{ padding: "4rem 0" }}>
     <LandingCardCol lg={4} leftpicture="leftpicture">
-      <Image fileName="leftpicture.png" />
-      <LandingCardCaption>The Story of Weed Man & Bayer</LandingCardCaption>
+      <LandingCardLinks to="#">
+        <Image fileName="leftpicture.png" />
+        <LandingCardCaption>The Story of Weed Man & Bayer</LandingCardCaption>
+      </LandingCardLinks>
     </LandingCardCol>
     <LandingCardCol lg={4}>
-      <Image fileName="rightpicture.png" />
-      <LandingCardCaption>Unfolding Noguchi</LandingCardCaption>
+      <LandingCardLinks to="#">
+        <Image fileName="center.png" />
+        <LandingCardCaption>Unfolding Noguchi</LandingCardCaption>
+      </LandingCardLinks>
     </LandingCardCol>
     <LandingCardCol lg={4} rightpicture="rightpicture">
-      <Image fileName="rightpicture.png" />
-      <LandingCardCaption>BSMNT</LandingCardCaption>
+      <LandingCardLinks to="#">
+        <Image fileName="rightpicture.png" />
+        <LandingCardCaption>BSMNT</LandingCardCaption>
+      </LandingCardLinks>
     </LandingCardCol>
   </Row>
 )
