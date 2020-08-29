@@ -29,7 +29,7 @@ const LandingCardCaption = styled.h2`
 // ---------------------------------------------------------------------------------- //
 
 export const LandingCards = () => (
-  <Row style={{ paddingTop: "4rem" }}>
+  <Row style={{ padding: "4rem 0" }}>
     <LandingCardCol lg={4} leftpicture="leftpicture">
       <Image fileName="leftpicture.png" />
       <LandingCardCaption>The Story of Weed Man & Bayer</LandingCardCaption>

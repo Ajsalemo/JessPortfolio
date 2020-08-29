@@ -48,6 +48,7 @@ export const Header = ({ name }) => (
         href="https://www.linkedin.com/in/jessica0perry/"
         linkedin="linkedin"
         rel="noopener noreferrer"
+        target="_blank"
       >
         in
       </LinkedinLink>
