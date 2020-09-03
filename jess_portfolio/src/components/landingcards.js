@@ -39,19 +39,37 @@ const LandingCardLinks = styled(Link)`
 export const LandingCards = () => (
   <Row style={{ padding: "4rem 0" }}>
     <LandingCardCol lg={4} leftpicture="leftpicture">
-      <LandingCardLinks to="#">
+      <LandingCardLinks
+        to="/work/weedman_bayer"
+        state={{
+          videoSrc: "https://www.youtube.com/embed/wlyNuxJ0NWo",
+          title: "The story of Weedman and Bayer",
+        }}
+      >
         <Image fileName="leftpicture.png" />
         <LandingCardCaption>The Story of Weed Man & Bayer</LandingCardCaption>
       </LandingCardLinks>
     </LandingCardCol>
     <LandingCardCol lg={4}>
-      <LandingCardLinks to="#">
+      <LandingCardLinks
+        to="/work/noguchi"
+        state={{
+          videoSrc: "https://www.youtube.com/embed/f-j27ZL4aFU",
+          title: "Unfolding Noguchi",
+        }}
+      >
         <Image fileName="center.png" />
         <LandingCardCaption>Unfolding Noguchi</LandingCardCaption>
       </LandingCardLinks>
     </LandingCardCol>
     <LandingCardCol lg={4} rightpicture="rightpicture">
-      <LandingCardLinks to="#">
+      <LandingCardLinks
+        to="/work/BSMNT"
+        state={{
+          videoSrc: "https://player.vimeo.com/video/333603540",
+          title: "BSMNT",
+        }}
+      >
         <Image fileName="rightpicture.png" />
         <LandingCardCaption>BSMNT</LandingCardCaption>
       </LandingCardLinks>
