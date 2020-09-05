@@ -1,9 +1,9 @@
 import React from "react"
 import Container from "react-bootstrap/Container"
+import { Bio } from "../components/bio"
+import { Footer } from "../components/footer"
 // Components
 import { Header } from "../components/header"
-import { Footer } from "../components/footer"
-import { Bio } from "../components/bio"
 
 const About = () => (
   <Container fluid style={{ height: "100vh" }}>
