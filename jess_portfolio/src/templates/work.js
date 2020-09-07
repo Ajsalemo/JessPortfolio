@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row"
 import styled from "styled-components"
 import { Footer } from "../components/footer"
 import { Header } from "../components/header"
+import { RoutingUI } from "../components/routingui"
 
 // --------------------------------------- Styled Components ------------------------ //
 // ---------------------------------------------------------------------------------- //
@@ -28,44 +29,20 @@ const StyledWorkSubTitle = styled(Col)`
 `
 // ---------------------------------------------------------------------------------- //
 // ---------------------------------------------------------------------------------- //
-
-// TODO - Use this in conjunction with a new component to create a logical routing path through the UI
-// This component will not scale out well - this will be implemented for the time being
-const determineCurrentPath = data => {
-  switch (data.location.pathname) {
-    case "/work/weedman": {
-      const routingObject = {
-        routingLink: "/work/noguchi",
-        routingText: "Unfolding Noguchi",
-      }
-      return routingObject
-    }
-    case "/work/noguchi": {
-      const routingObject = {
-        routingLink: "/work/weedman",
-        routingLinkTwo: "/work/bsmnt",
-        routingText: "The Story of Weed Man & Bayer",
-        routingTextTwo: "BSMNT",
-      }
-      return routingObject
-    }
-    case "/work/BSMNT": {
-      const routingObject = {
-        routingLink: "/work/noguchi",
-        routingText: "BSMNT",
-      }
-      return routingObject
-    }
-    default:
-      break
-  }
-}
-
-// ---------------------------------------------------------------------------------- //
-// ---------------------------------------------------------------------------------- //
 const Work = ({ data }) => {
   const { markdownRemark } = data
-  const { title, subTitle, secondaryTitle, iFrame } = markdownRemark.frontmatter
+  const {
+    title,
+    subTitle,
+    secondaryTitle,
+    iFrame,
+    forwardLinkName,
+    forwardLink,
+    backLinkName,
+    backLink,
+    start,
+    end,
+  } = markdownRemark.frontmatter
   return (
     <Container fluid style={{ height: "100vh" }}>
       <Header name="Jessica Perry" />
@@ -88,6 +65,14 @@ const Work = ({ data }) => {
           <StyledWorkSubTitle>{subTitle}</StyledWorkSubTitle>
         </StyledWorkDescriptionCol>
       </StyledWorkRow>
+      <RoutingUI
+        forwardLinkName={forwardLinkName}
+        forwardLink={forwardLink}
+        backLinkName={backLinkName}
+        backLink={backLink}
+        start={start}
+        end={end}
+      />
       <Footer />
     </Container>
   )
@@ -104,6 +89,12 @@ export const query = graphql`
         subTitle
         secondaryTitle
         iFrame
+        forwardLinkName
+        forwardLink
+        backLinkName
+        backLink
+        start
+        end
       }
     }
   }

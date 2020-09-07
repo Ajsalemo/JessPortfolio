@@ -3,7 +3,6 @@ import React from "react"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import styled from "styled-components"
-// Components
 import { Image } from "./image"
 
 // --------------------------------------- Styled Components ------------------------ //
