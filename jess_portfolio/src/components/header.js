@@ -1,7 +1,11 @@
+import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
 import React from "react"
 import Navbar from "react-bootstrap/Navbar"
 import NavbarBrand from "react-bootstrap/NavbarBrand"
+import NavDropdown from "react-bootstrap/NavDropdown"
+import NavItem from "react-bootstrap/NavItem"
 import styled from "styled-components"
 
 // --------------------------------------- Styled Components ------------------------ //
@@ -10,7 +14,7 @@ import styled from "styled-components"
 const StyledNavbar = styled(Navbar)`
   height: 10rem;
   justify-content: space-between;
-  padding: 0 2.6rem;
+  // padding: 0 2.6rem;
 `
 const StyledNavbarBrand = styled(NavbarBrand)`
   font-size: 1.95rem;
@@ -18,18 +22,30 @@ const StyledNavbarBrand = styled(NavbarBrand)`
   letter-spacing: 0.03rem;
 `
 const LinkedinLink = styled.a`
-  padding-left: 2rem;
+  // padding-left: 2rem;
+  padding-left: 0.4rem;
   font-weight: 800;
   font-size: 1.2rem;
   color: #000;
 `
 const HeaderParentDiv = styled.div`
   width: 14%;
-  display: flex;
+  display: none;
   justify-content: space-around;
   padding: 0 0 0.2rem 0.5rem;
   font-size: 1.05rem;
   align-items: center;
+  @media (min-width: 992px) {
+    display: flex;
+  }
+`
+const StyledNavDropdown = styled(NavDropdown)`
+  @media (min-width: 992px) {
+    display: none;
+  }
+  a {
+    color: #000;
+  }
 `
 // ---------------------------------------------------------------------------------- //
 // ---------------------------------------------------------------------------------- //
@@ -53,5 +69,24 @@ export const Header = ({ name }) => (
         in
       </LinkedinLink>
     </HeaderParentDiv>
+    {/* Mobile NavDropdown */}
+    <StyledNavDropdown
+      title={<FontAwesomeIcon icon={faBars} style={{ color: "#000" }} />}
+    >
+      <NavItem href="/" style={{ paddingLeft: "0.4rem" }}>
+        Work
+      </NavItem>
+      <NavItem href="/about" style={{ paddingLeft: "0.4rem" }}>
+        About
+      </NavItem>
+      <LinkedinLink
+        href="https://www.linkedin.com/in/jessica0perry/"
+        linkedin="linkedin"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        in
+      </LinkedinLink>
+    </StyledNavDropdown>
   </StyledNavbar>
 )

@@ -11,12 +11,19 @@ import { Image } from "./image"
 const LandingCardCol = styled(Col)`
   display: flex;
   flex-direction: column;
-  align-items: ${props =>
-    props.leftpicture
-      ? "flex-end"
-      : props.rightpicture
-      ? "flex-start"
-      : "center"};
+  margin: 0 auto;
+  @media (min-width: 330px) {
+    align-items: center;
+    padding-bottom: 4rem;
+  }
+  @media (min-width: 1776px) {
+    align-items: ${props =>
+      props.leftpicture
+        ? "flex-end"
+        : props.rightpicture
+        ? "flex-start"
+        : "center"};
+  }
 `
 const LandingCardCaption = styled.h2`
   text-align: center;
@@ -37,19 +44,19 @@ const LandingCardLinks = styled(Link)`
 
 export const LandingCards = () => (
   <Row style={{ padding: "4rem 0" }}>
-    <LandingCardCol lg={4} leftpicture="leftpicture">
+    <LandingCardCol lg={4} md={6} xs={12} leftpicture="leftpicture">
       <LandingCardLinks to="/work/weedman">
         <Image fileName="leftpicture.png" />
         <LandingCardCaption>The Story of Weed Man & Bayer</LandingCardCaption>
       </LandingCardLinks>
     </LandingCardCol>
-    <LandingCardCol lg={4}>
+    <LandingCardCol lg={4} md={6} xs={12}>
       <LandingCardLinks to="/work/noguchi">
         <Image fileName="center.png" />
         <LandingCardCaption>Unfolding Noguchi</LandingCardCaption>
       </LandingCardLinks>
     </LandingCardCol>
-    <LandingCardCol lg={4} rightpicture="rightpicture">
+    <LandingCardCol lg={4} md={6} xs={12} rightpicture="rightpicture">
       <LandingCardLinks to="/work/bsmnt">
         <Image fileName="rightpicture.png" />
         <LandingCardCaption>BSMNT</LandingCardCaption>

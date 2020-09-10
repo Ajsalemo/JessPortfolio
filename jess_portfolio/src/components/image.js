@@ -7,12 +7,16 @@ import styled from "styled-components"
 // ---------------------------------------------------------------------------------- //
 
 const StyledGatsbyImg = styled(Img)`
-  height: ${props => (props.fileName === "headshot.png" ? "40rem" : "35rem")};
-  width: 35rem;
+  height: ${props => (props.fileName === "headshot.png" ? "40rem" : "25rem")};
+  width: 20rem;
   transition: 0.5s ease;
   &:hover {
     transition: 0.5s ease;
     opacity: ${props => (props.fileName === "headshot.png" ? null : "0.7")};
+  }
+  @media (min-width: 1542px) {
+    width: 30rem;
+    height: 35rem;
   }
 `
 // ---------------------------------------------------------------------------------- //
