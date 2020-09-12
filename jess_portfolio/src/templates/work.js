@@ -47,10 +47,10 @@ const Work = ({ data }) => {
     <Container fluid style={{ height: "100vh" }}>
       <Header name="Jessica Perry" />
       <StyledWorkRow>
-        <Col lg={10} style={{ textAlign: "center" }}>
+        <Col lg={10} xl={8} style={{ textAlign: "center" }}>
           {" "}
           <iframe
-            width="1180"
+            width="100%"
             height="670"
             title={title}
             src={iFrame}

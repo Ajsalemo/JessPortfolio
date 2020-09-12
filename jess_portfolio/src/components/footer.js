@@ -55,7 +55,7 @@ export const Footer = () => (
       </FooterLinkedinLink>
     </div>
     <FooterGroupLinksParentCol lg={12} style={{ paddingTop: "2.8rem" }}>
-      <FooterGroupLinksChildCol lg={2}>
+      <FooterGroupLinksChildCol md={4} lg={4}>
         <FooterGroupLinks to="/">Work</FooterGroupLinks>
         <FooterGroupLinks to="#">Contact</FooterGroupLinks>
       </FooterGroupLinksChildCol>

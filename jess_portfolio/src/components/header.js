@@ -5,7 +5,6 @@ import React from "react"
 import Navbar from "react-bootstrap/Navbar"
 import NavbarBrand from "react-bootstrap/NavbarBrand"
 import NavDropdown from "react-bootstrap/NavDropdown"
-import NavItem from "react-bootstrap/NavItem"
 import styled from "styled-components"
 
 // --------------------------------------- Styled Components ------------------------ //
@@ -14,7 +13,6 @@ import styled from "styled-components"
 const StyledNavbar = styled(Navbar)`
   height: 10rem;
   justify-content: space-between;
-  // padding: 0 2.6rem;
 `
 const StyledNavbarBrand = styled(NavbarBrand)`
   font-size: 1.95rem;
@@ -22,7 +20,6 @@ const StyledNavbarBrand = styled(NavbarBrand)`
   letter-spacing: 0.03rem;
 `
 const LinkedinLink = styled.a`
-  // padding-left: 2rem;
   padding-left: 0.4rem;
   font-weight: 800;
   font-size: 1.2rem;
@@ -40,11 +37,16 @@ const HeaderParentDiv = styled.div`
   }
 `
 const StyledNavDropdown = styled(NavDropdown)`
+  a {
+    color: #000;
+  }
   @media (min-width: 992px) {
     display: none;
   }
-  a {
-    color: #000;
+
+  .dropdown-menu.show {
+    display: flex;
+    flex-direction: column;
   }
 `
 // ---------------------------------------------------------------------------------- //
@@ -72,13 +74,14 @@ export const Header = ({ name }) => (
     {/* Mobile NavDropdown */}
     <StyledNavDropdown
       title={<FontAwesomeIcon icon={faBars} style={{ color: "#000" }} />}
+      menuRole="menu"
     >
-      <NavItem href="/" style={{ paddingLeft: "0.4rem" }}>
+      <Link to="/" style={{ paddingLeft: "0.4rem" }}>
         Work
-      </NavItem>
-      <NavItem href="/about" style={{ paddingLeft: "0.4rem" }}>
+      </Link>
+      <Link to="/about" style={{ paddingLeft: "0.4rem" }}>
         About
-      </NavItem>
+      </Link>
       <LinkedinLink
         href="https://www.linkedin.com/in/jessica0perry/"
         linkedin="linkedin"
