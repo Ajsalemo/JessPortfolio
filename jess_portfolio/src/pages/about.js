@@ -2,7 +2,6 @@ import React from "react"
 import Container from "react-bootstrap/Container"
 import { Bio } from "../components/bio"
 import { Footer } from "../components/footer"
-// Components
 import { Header } from "../components/header"
 
 const About = () => (

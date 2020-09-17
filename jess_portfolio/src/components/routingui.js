@@ -86,10 +86,12 @@ export const RoutingUI = ({
             />
           ) : null}
           {forwardLinkName}
-          <FontAwesomeIcon
-            icon={end ? null : faChevronRight}
-            style={{ margin: "0 2rem" }}
-          />
+          {end ? null : (
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              style={{ margin: "0 2rem" }}
+            />
+          )}
         </StyledRoutingUILink>
       </StyledRoutingUICol>
     </Row>

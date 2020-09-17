@@ -47,7 +47,7 @@ const Work = ({ data }) => {
     <Container fluid style={{ height: "100vh" }}>
       <Header name="Jessica Perry" />
       <StyledWorkRow>
-        <Col lg={10} xl={8} style={{ textAlign: "center" }}>
+        <Col lg={10} xl={8} style={{ textAlign: "center" }} className="embed-responsive embed-responsive-16by9">
           {" "}
           <iframe
             width="100%"
@@ -57,6 +57,7 @@ const Work = ({ data }) => {
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            className="embed-responsive-item"
           ></iframe>
         </Col>
         <StyledWorkDescriptionCol lg={10}>
