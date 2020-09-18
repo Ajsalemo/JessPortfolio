@@ -14,8 +14,16 @@ const StyledGatsbyImg = styled(Img)`
     transition: 0.5s ease;
     opacity: ${props => (props.fileName === "headshot.png" ? null : "0.7")};
   }
+  @media (min-width: 576px) and (max-width: 745px) {
+    width:  ${props => (props.fileName === "headshot.png" ? "40rem" : "11.7rem")};
+    height: ${props => (props.fileName === "headshot.png" ? "40rem" : "11.7rem")};
+  }
+  @media (min-width: 745px) {
+    width:  ${props => (props.fileName === "headshot.png" ? "40rem" : "15.2rem")};
+    height: ${props => (props.fileName === "headshot.png" ? "40rem" : "15.2rem")};
+  }
   @media (min-width: 992px) {
-    width:  ${props => (props.fileName === "headshot.png" ? "40rem" : "16rem")};
+    width:  ${props => (props.fileName === "headshot.png" ? "40rem" : "18rem")};
     height: ${props => (props.fileName === "headshot.png" ? "40rem" : "18rem")};
   }
   @media (min-width: 1100px) {
