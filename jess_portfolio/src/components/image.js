@@ -7,16 +7,32 @@ import styled from "styled-components"
 // ---------------------------------------------------------------------------------- //
 
 const StyledGatsbyImg = styled(Img)`
-  height: ${props => (props.fileName === "headshot.png" ? "40rem" : "25rem")};
-  width: 20rem;
+  height: ${props => (props.fileName === "headshot.png" ? "40rem" : "20rem")};
+  width:  ${props => (props.fileName === "headshot.png" ? "40rem" : "20rem")};
   transition: 0.5s ease;
   &:hover {
     transition: 0.5s ease;
     opacity: ${props => (props.fileName === "headshot.png" ? null : "0.7")};
   }
-  @media (min-width: 1542px) {
-    width: 30rem;
-    height: 35rem;
+  @media (min-width: 992px) {
+    width:  ${props => (props.fileName === "headshot.png" ? "40rem" : "16rem")};
+    height: ${props => (props.fileName === "headshot.png" ? "40rem" : "18rem")};
+  }
+  @media (min-width: 1100px) {
+    width:  ${props => (props.fileName === "headshot.png" ? "30rem" : "18rem")};
+    height: ${props => (props.fileName === "headshot.png" ? "30rem" : "20rem")};
+  }
+  @media (min-width: 1218px) {
+    width:  ${props => (props.fileName === "headshot.png" ? "30rem" : "20rem")};
+    height: ${props => (props.fileName === "headshot.png" ? "30rem" : "20rem")};
+  }
+  @media (min-width: 1388px) {
+    width:  ${props => (props.fileName === "headshot.png" ? "34rem" : "22rem")};
+    height: ${props => (props.fileName === "headshot.png" ? "34rem" : "22rem")};
+  }
+  @media (min-width: 1620px) {
+    width:  ${props => (props.fileName === "headshot.png" ? "38rem" : "26rem")};
+    height: ${props => (props.fileName === "headshot.png" ? "38rem" : "26rem")};
   }
 `
 // ---------------------------------------------------------------------------------- //
