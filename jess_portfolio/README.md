@@ -7,18 +7,18 @@
 ## Home page
 <br>
 
-[Imgur](https://imgur.com/SBiodPd)
+![Imgur](https://i.imgur.com/SBiodPd.png)
 
 
 ## Projects
 
-[Imgur](https://imgur.com/pClZ1F0)
+![Imgur](https://i.imgur.com/d9EuIL1.png)
 
 <br>
 
-[Imgur](https://imgur.com/pHR9zbp)
+![Imgur](https://i.imgur.com/pClZ1F0.png)
 
 <br>
 
-[Imgur](https://imgur.com/d9EuIL1)
+![Imgur](https://i.imgur.com/pHR9zbp.png)
 
